@@ -9,11 +9,11 @@ html {
 }
 .appl-wripper {
   width: 100%;
+  font-family: cursive;
 }
 .header {
   background-color: beige;
   padding: 20px;
-  font-family: serif;
 }
 .appl-veiw {
   width: 900px;
@@ -64,7 +64,7 @@ html {
 }
 .form p {
   display: inline-block;
-  font-size: 25px;
+  font-size: 22px;
   color: white;
   margin-top: 50px;
 }
@@ -75,12 +75,18 @@ html {
   height: 30px;
   padding: 2px 5px;
 }
+.form button:hover {
+  background-color: white;
+}
 .form button {
   background-color: #2a9023;
   padding: 7px 20px;
   border-radius: 5px;
   outline: none;
   margin: 15px;
+}
+.form-bg a:hover {
+  color: green;
 }
 .form-bg a {
   text-decoration: none;
@@ -90,10 +96,14 @@ html {
 .chart-img img {
   width: 100%;
   margin-bottom: 100px;
+  filter: contrast(1.4);
 }
 
 .submit-no input {
   border: 1px solid;
+}
+.collection-info {
+  display: block;
 }
 .dite-info {
   width: 900px;
@@ -101,11 +111,21 @@ html {
   display: block;
   background-color: beige;
   display: none;
-  padding: 10px;
   margin-bottom: 50px;
 }
 .food-img {
   width: 300px;
+  height: 250px;
+}
+.flotimg {
+  float: right;
+}
+.flotimg2 {
+  float: right;
+  height: 250px;
+}
+.flotdiv {
+  height: 250px;
 }
 .amout-of-dite {
   display: inline-block;
@@ -114,4 +134,60 @@ html {
   padding: 20px;
   font-size: 20px;
   border-top: 2px solid green;
+}
+/* media css */
+
+/* @media only screen and (max-width:640px) and (min-widht:1px); */
+@media only screen and (min-width: 1px) and (max-width: 640px) {
+  .appl-veiw {
+    width: 100%;
+  }
+  .appl-heading {
+    margin-left: 0px;
+    display: block;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+  .header {
+    position: relative;
+    background-color: white;
+  }
+  .dr-image {
+    width: 105px;
+    float: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .chart-img img {
+    margin-bottom: 30px;
+  }
+
+  .form {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .dite-info {
+    width: 100%;
+  }
+  .food-img {
+    width: 100%;
+  }
+  .amout-of-dite {
+    width: 100%;
+    border-bottom: 1px solid green;
+    border-top: 0px;
+    margin-bottom: 40px;
+  }
+  .flotdiv {
+    height: auto;
+  }
+  .flotdiv2 {
+    height: auto;
+  }
+  .amout-of-dite b {
+    color: green;
+  }
 }
