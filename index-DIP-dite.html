@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/DIP-style.css" />
+  </head>
+  <body>
+    <section class="appl-wripper">
+      <section class="header">
+        <div class="appl-veiw">
+          <img class="appl-logo" src="image/application-logo.png" />
+          <div class="appl-heading">
+            <h1>DIP dite plan</h1>
+            <p>by</p>
+            <h2>Dr. Biswaroop Roy Chowdhury</h2>
+            <p>ph.D in Diabetes</p>
+          </div>
+          <img class="dr-image" src="image/download.jpg" />
+        </div>
+      </section>
+      <section class="chart-img">
+        <!-- <div class="form">
+          <h1>DIP Dite plan</h1>
+          <p>Your Height :</p>
+          <input type="number" name="value" /><br />
+          <p>Your Width :</p>
+          <input type="number" name="value" /><br />
+          <button>submit</button>
+        </div> -->
+        <img src="image/diet-chart.jpg" />
+      </section>
+      <section class="submit-no">
+        <div class="form">
+          <div class="form-bg">
+            <p>index number (@) :</p>
+            <input type="number" name="value" id="get-alpha-no" /><br />
+            <button onclick="displayDiet()">
+              <a href="#callOnClick">Submit</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <sction class="dite-info" id="callOnClick">
+        <img class="food-img" src="image/fruits.jpg" />
+        <div class="amout-of-dite">
+          <b id="fruits">0</b>
+          <span>gm of fruits</span>
+          <p>befor brakfast</p>
+        </div>
+        <br />
+        <div class="amout-of-dite">
+          <b id="vegetables">0</b>
+          <span>gm of vegetables</span>
+          <p>befor lunch</p>
+        </div>
+        <img class="food-img" src="image/vegetables.jpg" />
+        <br />
+        <img class="food-img" src="image/leafy-veg.jpg" />
+        <div class="amout-of-dite">
+          <b id="green-leaves"></b>
+          <span>gm of Green Leaves</span>
+          <p>befor lunch</p>
+        </div>
+        <div class="amout-of-dite">
+          <b id="nuts"></b>
+          <span>gm of Nuts</span>
+          <p>any time in whole day.</p>
+        </div>
+        <img class="food-img" src="image/nuts.jpg" />
+        <br />
+        <img class="food-img" src="image/sprouts.jpg" />
+        <div class="amout-of-dite">
+          <b id="sprouts"></b>
+          <span>gm of sprouts</span>
+          <p>any time in whole day</p>
+        </div>
+      </sction>
+    </section>
+    <script>
+      function displayDiet() {
+        var input = document.getElementById("get-alpha-no");
+        var indexNo = input.value;
+        document.getElementById("fruits").innerHTML = indexNo;
+        document.getElementById("vegetables").innerHTML = indexNo;
+        var calGreenLeaves = indexNo * 0.1;
+        document.getElementById("green-leaves").innerHTML = calGreenLeaves;
+        var calNuts = indexNo * 0.05;
+        document.getElementById("nuts").innerHTML = calNuts;
+        document.getElementById("sprouts").innerHTML = calNuts;
+
+        //
+        var diplayDiet = document.querySelector(".dite-info");
+        diplayDiet.style.display = "block";
+        //
+      }
+    </script>
+  </body>
+</html>
